@@ -52,10 +52,9 @@ const useStyles = makeStyles((theme) => ({
   },
   inputInput: {
     padding: theme.spacing(1, 1, 1, 0),
-    // vertical padding + font size from searchIcon
     paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
     transition: theme.transitions.create('width'),
-    width: '100%',
+   
     [theme.breakpoints.up('md')]: {
       width: '20ch',
     },
@@ -146,18 +145,18 @@ export default function PrimarySearchAppBar() {
   );
 return (
     <div className={classes.grow}>
-      <AppBar position="static">
+      <AppBar position="static" style={{backgroundColor:'#241c30'}}>
         <Toolbar>
-          <Typography style={{flexGrow:7}}  variant="h6" noWrap>
+          <Typography style={{flexGrow:9}}  variant="h6" noWrap>
             Material-UI
           </Typography>
           <div className={classes.sectionDesktop}>
-          <Button style={{textTransform: 'none'}} color="inherit" component = {Link} to="/">Home</Button>
-          <Button style={{textTransform: 'none'}} color="inherit" component = {Link} to="/finddonor"> Find donor</Button>
-          <Button style={{textTransform: 'none'}} color="inherit">Donate</Button>
-          <Button style={{textTransform: 'none'}} color="inherit">Blood banks</Button>
-          <Button style={{textTransform: 'none'}} color="inherit">Recommendations</Button>
-          <Button style={{textTransform: 'none'}} color="inherit">About us</Button>
+          <Button style={{textTransform: 'none',marginRight:'10px'}} color="inherit" component = {Link} to="/">Home</Button>
+          <Button style={{textTransform: 'none',marginRight:'10px'}} color="inherit" component = {Link} to="/finddonor"> Find donor</Button>
+          <Button style={{textTransform: 'none',marginRight:'10px'}} color="inherit">Donate</Button>
+          <Button style={{textTransform: 'none',marginRight:'10px'}} color="inherit">Blood banks</Button>
+          <Button style={{textTransform: 'none',marginRight:'10px'}} color="inherit">Recommendations</Button>
+          <Button style={{textTransform: 'none',marginRight:'10px'}} color="inherit">About us</Button>
           </div>
           <div className={classes.grow} />
         
